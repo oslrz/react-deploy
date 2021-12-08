@@ -1,6 +1,6 @@
 {
+  "homepage": "http://oslrz.github.io/react-deploy",
   "name": "announcement",
-  "homepage": "https://oslrz.github.io/oslzr.github.io/announcement",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
