@@ -50,7 +50,7 @@ class Field extends React.Component {
   }
 
   componentWillReceiveProps() {
-    if (this.props.search) {
+    if (this.props.search.length>1) {
       console.log(this.props.search)
       let data = Announcement_data;
       let new_data1 = [];
@@ -60,6 +60,8 @@ class Field extends React.Component {
         }
       }
       this.setState({ new_data: new_data1 });
+    }else{
+      this.setState({new_data:this.state.old_data})
     }
   }
 

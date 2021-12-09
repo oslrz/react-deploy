@@ -9,11 +9,15 @@ class App extends React.Component {
     }
   }
   NewSearchString = (data) =>{
-    if(data.length > 0){
-      this.setState({search_data:data})
-    }else{
-      this.setState({search:false})
-    }
+    // if(data.length > 0){
+      this.setState({search_data:data},()=>{
+        this.forceUpdate()
+      })
+    // }else{
+    //   this.setState({search:false},()=>{
+    //     this.forceUpdate()
+    //   })
+    // }
     
   }
   render() {
