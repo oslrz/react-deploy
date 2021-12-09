@@ -1,12 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <h1>My React App112</h1>
-    </div>
-  );
+import Navbar from "./Navbar";
+import React from "react";
+import Field from "./Field";
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      search_data:false
+    }
+  }
+  NewSearchString = (data) =>{
+    if(data.length > 0){
+      this.setState({search_data:data})
+    }else{
+      this.setState({search:false})
+    }
+    
+  }
+  render() {
+    return (
+      <div>
+        <Navbar NewSearchString={this.NewSearchString} />
+        <Field search = {this.state.search_data} />
+      </div>
+    );
+  }
 }
 
 export default App;
